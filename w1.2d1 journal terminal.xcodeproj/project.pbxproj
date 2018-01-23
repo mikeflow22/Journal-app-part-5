@@ -14,6 +14,7 @@
 		1B5E037D2016C2DF003B7D03 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E037C2016C2DF003B7D03 /* Entry.swift */; };
 		1B5E037F2016C358003B7D03 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E037E2016C358003B7D03 /* EntryController.swift */; };
 		1B5E03832016C753003B7D03 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E03822016C753003B7D03 /* EntryListTableViewController.swift */; };
+		1B5E03852016D12B003B7D03 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E03842016D12B003B7D03 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B5E037C2016C2DF003B7D03 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		1B5E037E2016C358003B7D03 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		1B5E03822016C753003B7D03 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		1B5E03842016D12B003B7D03 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,10 @@
 		1B5E03672016C1D8003B7D03 /* w1.2d1 journal terminal */ = {
 			isa = PBXGroup;
 			children = (
-				1B5E03822016C753003B7D03 /* EntryListTableViewController.swift */,
 				1B5E037B2016C295003B7D03 /* UI */,
-				1B5E03802016C367003B7D03 /* Model */,
 				1B5E03812016C36D003B7D03 /* Model Controller */,
+				1B5E03802016C367003B7D03 /* Model */,
+				1B5E03862016D139003B7D03 /* View Controllers */,
 				1B5E037A2016C27B003B7D03 /* Resources */,
 			);
 			path = "w1.2d1 journal terminal";
@@ -100,6 +102,15 @@
 				1B5E037E2016C358003B7D03 /* EntryController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		1B5E03862016D139003B7D03 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E03842016D12B003B7D03 /* EntryDetailViewController.swift */,
+				1B5E03822016C753003B7D03 /* EntryListTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				1B5E037F2016C358003B7D03 /* EntryController.swift in Sources */,
 				1B5E037D2016C2DF003B7D03 /* Entry.swift in Sources */,
 				1B5E03832016C753003B7D03 /* EntryListTableViewController.swift in Sources */,
+				1B5E03852016D12B003B7D03 /* EntryDetailViewController.swift in Sources */,
 				1B5E03692016C1D8003B7D03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

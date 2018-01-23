@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,11 +33,72 @@
                             <outlet property="delegate" destination="drt-CW-TOt" id="ekY-W0-oO6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="101-YY-1rW"/>
+                    <navigationItem key="navigationItem" id="101-YY-1rW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tfj-fE-2Sf">
+                            <connections>
+                                <segue destination="FwH-El-ZRV" kind="show" identifier="addButton" id="uXk-ir-HWB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JC-fH-lKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Entry Page-->
+        <scene sceneID="kvo-F4-TlS">
+            <objects>
+                <viewController id="FwH-El-ZRV" customClass="EntryDetailViewController" customModule="w1_2d1_journal_terminal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uK1-Q5-HqW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-Jz-xhh">
+                                <rect key="frame" x="16" y="81" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FwH-El-ZRV" id="xyq-fU-gVp"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-WQ-IEz">
+                                <rect key="frame" x="33" y="155" width="297" height="409"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0F-3y-s5A">
+                                <rect key="frame" x="119" y="591" width="113" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CLEAR">
+                                    <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="FwH-El-ZRV" eventType="touchUpInside" id="NdZ-E2-fGM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0DQ-Dy-3X9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Entry Page" id="aaU-1j-Eu7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PsT-HK-KzC">
+                            <connections>
+                                <action selector="savedButtonTapped:" destination="FwH-El-ZRV" id="zvf-jz-L9n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="JDn-WQ-IEz" id="Qdt-qD-kam"/>
+                        <outlet property="titleTextField" destination="vKI-Jz-xhh" id="P9T-ca-JVl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBM-Qw-H4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.60000000000002" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eg9-WG-cfY">
