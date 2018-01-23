@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1B5E03692016C1D8003B7D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E03682016C1D8003B7D03 /* AppDelegate.swift */; };
-		1B5E036B2016C1D8003B7D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E036A2016C1D8003B7D03 /* ViewController.swift */; };
 		1B5E036E2016C1D8003B7D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E036C2016C1D8003B7D03 /* Main.storyboard */; };
 		1B5E03702016C1D8003B7D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E036F2016C1D8003B7D03 /* Assets.xcassets */; };
 		1B5E03732016C1D8003B7D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E03712016C1D8003B7D03 /* LaunchScreen.storyboard */; };
+		1B5E037D2016C2DF003B7D03 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E037C2016C2DF003B7D03 /* Entry.swift */; };
+		1B5E037F2016C358003B7D03 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E037E2016C358003B7D03 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B5E03652016C1D8003B7D03 /* w1.2d1 journal terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "w1.2d1 journal terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5E03682016C1D8003B7D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B5E036A2016C1D8003B7D03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B5E036D2016C1D8003B7D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B5E036F2016C1D8003B7D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B5E03722016C1D8003B7D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B5E03742016C1D8003B7D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B5E037C2016C2DF003B7D03 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		1B5E037E2016C358003B7D03 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		1B5E03672016C1D8003B7D03 /* w1.2d1 journal terminal */ = {
 			isa = PBXGroup;
 			children = (
-				1B5E03682016C1D8003B7D03 /* AppDelegate.swift */,
-				1B5E036A2016C1D8003B7D03 /* ViewController.swift */,
-				1B5E036C2016C1D8003B7D03 /* Main.storyboard */,
+				1B5E037B2016C295003B7D03 /* UI */,
+				1B5E03802016C367003B7D03 /* Model */,
+				1B5E03812016C36D003B7D03 /* Model Controller */,
+				1B5E037A2016C27B003B7D03 /* Resources */,
+			);
+			path = "w1.2d1 journal terminal";
+			sourceTree = "<group>";
+		};
+		1B5E037A2016C27B003B7D03 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1B5E036F2016C1D8003B7D03 /* Assets.xcassets */,
 				1B5E03712016C1D8003B7D03 /* LaunchScreen.storyboard */,
 				1B5E03742016C1D8003B7D03 /* Info.plist */,
 			);
-			path = "w1.2d1 journal terminal";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B5E037B2016C295003B7D03 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E036C2016C1D8003B7D03 /* Main.storyboard */,
+				1B5E03682016C1D8003B7D03 /* AppDelegate.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1B5E03802016C367003B7D03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E037C2016C2DF003B7D03 /* Entry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B5E03812016C36D003B7D03 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E037E2016C358003B7D03 /* EntryController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B5E036B2016C1D8003B7D03 /* ViewController.swift in Sources */,
+				1B5E037F2016C358003B7D03 /* EntryController.swift in Sources */,
+				1B5E037D2016C2DF003B7D03 /* Entry.swift in Sources */,
 				1B5E03692016C1D8003B7D03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "w1.2d1 journal terminal/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/w1.2d1 journal terminal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "flowers.w1-2d1-journal-terminal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "w1.2d1 journal terminal/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/w1.2d1 journal terminal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "flowers.w1-2d1-journal-terminal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
