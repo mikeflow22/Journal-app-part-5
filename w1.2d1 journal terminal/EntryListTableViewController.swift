@@ -12,10 +12,11 @@ class EntryListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,20 +31,29 @@ class EntryListTableViewController: UITableViewController {
 
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        //get cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath)
+        //get information
+         let entry = EntryController.shared.entries[indexPath.row]
+        // Combine the cell and data/info
+        cell.textLabel?.text = entry.title
 
         return cell
     }
 
     // Override to support editing the table view.
+    //what are we deleting we are deleting an entry. We are deleting an entry so that means we need to find the index path inwhich it is located.
+    //we have to use the entries array to find the index
+    //do this 3 times without referencing code.1.2.
+    //1.get the indexPath from the entries array that we want to delete
+    //2.shared.remove function passing in the constant we assigned the indexPath to
+    //3. reloadTable view, and do it in the viewWillAppear function
+    //we have to use willappear becasue we are reloading data/view
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+         let entryToDelete = EntryController.shared.entries[indexPath.row]
+            EntryController.shared.remove(entry: entryToDelete)
+            tableView.reloadData()
         }    
     }
 
